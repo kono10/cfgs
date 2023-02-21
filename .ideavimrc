@@ -1,0 +1,75 @@
+
+"" Common settings -------------------------
+" lets you copy and paste from the system and pycharm clipboard
+set clipboard+=unnamed
+set clipboard+=ideaput
+
+" shows atleast 5 lines while scrolling
+set scrolloff=5
+" highlights search strings while typing
+set incsearch
+" shows the line number and the relative line number in the gutter
+set NERDTree
+set commentary
+
+let mapleader=" "
+" nnoremap d "_d
+" vnoremap d "_d
+" move between files
+"split navigations
+nnoremap <leader>l <C-w>l
+nnoremap <leader>h <C-w>h
+nnoremap <leader>k <C-w>k
+nnoremap <leader>j <C-w>j
+
+"nnoremap l <Nop>
+"nnoremap h <Nop>
+"nnoremap k <Nop>
+"nnoremap j <Nop>
+
+nnoremap c :q<CR>
+nnoremap c :q<CR>
+nnoremap q :action CloseAllEditors<CR>
+" mapped in vim but not ideavim
+nnoremap s :w<CR>
+
+" IDEAVIM SPECIFIC
+nnoremap <c-PageDown> gt<CR>
+nnoremap <c-PageUp> gT<CR>
+
+nnoremap <leader>z :action ToggleDistractionFreeMode<CR>
+nnoremap <leader>T :action Terminal.OpenInTerminal<CR>
+nnoremap <leader>t :action ActivateTerminalToolWindow<CR>
+" opens file search pop up
+nnoremap <leader>f :action GotoFile<CR>
+map <leader>n :NERDTree<CR>
+map <leader>nn :NERDTreeToggle<CR>
+" opens usages window, shift esc to close
+nnoremap <leader>u :action FindUsages<CR>
+" go to the original declaration of the class, function, etc.
+nnoremap <leader>d :action GotoDeclaration<CR>
+nnoremap <leader>i :action GotoImplementation<CR>
+" cool pop up window that shows python file structure
+nnoremap <leader>s :action FileStructurePopup<CR>
+nnoremap <Leader>R :action ReformatCode<CR>
+nnoremap <leader>O :action OptimizeImports<CR>
+nnoremap <leader>b :action ShowNavBar<CR>
+
+nnoremap <CR> :action ExpandRegion<CR>
+nnoremap <CR><CR> :action CollapseRegion<CR>
+
+nnoremap gb :action Back<CR>
+nnoremap gf :action Forward<CR>
+
+" RUN TEST
+nnoremap ,r :action RunClass<CR>
+nnoremap ,f :action RerunFailedTests<CR>
+nnoremap ,R :action ActivateRunToolWindow<CR>
+" DEBUGGER
+" not sure
+nnoremap ,D :action ActivateDebugToolWindow<CR>
+nnoremap ,u :action Rerun<CR>
+nnoremap ,b :action ToggleLineBreakpoint<CR>
+" not sure
+nnoremap ,d :action DebugClass<CR>
+" nnoremap ,dw :action ActivateDebugToolWindow<CR>%
